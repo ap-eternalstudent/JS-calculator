@@ -21,6 +21,7 @@ h1 {
   max-width: 30%;
 }
 #input--field {
+  font-size: 4rem;
   height: 4rem;
   width: 87%;
   margin: 2rem 0;
@@ -33,7 +34,11 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
-
+.operators {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -50,4 +55,8 @@ input[type="number"] {
 .btn {
   height: 4rem;
   width: 4rem;
+}
+
+.btn--op {
+  background-color: beige;
 }

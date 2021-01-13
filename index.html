@@ -7,26 +7,61 @@
     <title>Document</title>
   </head>
   <body>
-    <h1 class="heading">Calculator</h1>
-    <section class="container">
-        <section class="input">
-          <input type="number" name="enter numbers" id="input--field" />
-        </section>
-      <section class="row row--numbers">
-        <section class="col"><button class="btn btn--num">1</button></section>
-        <section class="col"><button class="btn btn--num">2</button></section>
-        <section class="col"><button class="btn btn--num">3</button></section>
-        <section class="col"><button class="btn btn--num">4</button></section>
-        <section class="col"><button class="btn btn--num">5</button></section>
-        <section class="col"><button class="btn btn--num">6</button></section>
-        <section class="col"><button class="btn btn--num">7</button></section>
-        <section class="col"><button class="btn btn--num">8</button></section>
-        <section class="col"><button class="btn btn--num">9</button></section>
-        <section class="col"><button class="btn btn--num">+</button></section>
-        <section class="col"><button class="btn btn--num">-</button></section>
-        <section class="col"><button class="btn btn--num">=</button></section>
+    <h1 class="heading">CLC</h1>
 
+    <section class="container">
+      <section class="input">
+        <input type="number" name="enter numbers" id="input--field" />
+      </section>
+      <section class="col">
+        <button id="clear" class="btn btn--clear">clear</button>
+      </section>
+      <section class="operators">
+        <section class="col">
+          <button id="opPlus" class="btn btn--op">+</button>
+        </section>
+        <section class="col">
+          <button id="opMinus" class="btn btn--op">-</button>
+        </section>
+        <section class="col">
+          <button id="opEquals" class="btn btn--op">=</button>
+        </section>
+      </section>
+      <section class="row row--numbers">
+        <section class="col">
+          <button id="num1" class="btn btn--num">1</button>
+        </section>
+
+        <section class="col">
+          <button id="num2" class="btn btn--num">2</button>
+        </section>
+        <section class="col">
+          <button id="num3" class="btn btn--num">3</button>
+        </section>
+        <section class="col">
+          <button id="num4" class="btn btn--num">4</button>
+        </section>
+        <section class="col">
+          <button id="num5" class="btn btn--num">5</button>
+        </section>
+        <section class="col">
+          <button id="num6" class="btn btn--num">6</button>
+        </section>
+        <section class="col">
+          <button id="num7" class="btn btn--num">7</button>
+        </section>
+        <section class="col">
+          <button id="num8" class="btn btn--num">8</button>
+        </section>
+        <section class="col">
+          <button id="num9" class="btn btn--num">9</button>
+        </section>
+        <section class="col">
+          <button id="num0" class="btn btn--num">0</button>
+        </section>
+      </section>
     </section>
+
     <script src="script.js"></script>
   </body>
 </html>
