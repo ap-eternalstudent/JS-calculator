@@ -14,22 +14,50 @@ const button0 = document.getElementById("num0");
 const buttonPlus = document.getElementById("opPlus");
 const buttonMinus = document.getElementById("opMinus");
 const buttonEuqals = document.getElementById("opEquals");
+const buttonClear = document.getElementById("opClear");
 
-input.value = "0";
+let initialDipslay = String("0");
+input.value = initialDipslay;
 
-const displayNumber = function () {
-  button1.textContent;
+let numbers = [];
+let numbersToDisplay = "";
+const displayAndStoreNumber = function (button) {
+  buttonNo = button.target.textContent;
+  numbers.push(buttonNo);
+  numbersToDisplay += String(button.target.textContent);
+  input.value = numbersToDisplay;
+  console.log(numbersToDisplay);
+  console.log(numbers);
 };
-button1.addEventListener("click");
-// button2.addEventListener("click", displayNumber);
-// button3.addEventListener("click", displayNumber);
-// button4.addEventListener("click", displayNumber);
-// button5.addEventListener("click", displayNumber(button5));
-// button6.addEventListener("click", displayNumber(button6));
-// button7.addEventListener("click", displayNumber(button7));
-// button8.addEventListener("click", displayNumber(button8));
-// button9.addEventListener("click", displayNumber(button9));
-// button0.addEventListener("click", displayNumber(button0));
-// button2.addEventListener("click", displayNumber(button2));
-// button2.addEventListener("click", displayNumber(button2));
-console.log(button1.textContent);
+
+const clearButton = function () {
+  numbers = [];
+  numbersToDisplay = "";
+  input.value = initialDipslay;
+  console.log("all clear");
+};
+
+const operationButton = function (button) {
+  if (button.target.textContent == "+") {
+    console.log("im a plus +");
+  } else if (button.target.textContent == "-") {
+    console.log("im a minus -");
+  } else {
+    console.log("i am an equals =");
+  }
+};
+
+button1.addEventListener("click", displayAndStoreNumber);
+button2.addEventListener("click", displayAndStoreNumber);
+button3.addEventListener("click", displayAndStoreNumber);
+button4.addEventListener("click", displayAndStoreNumber);
+button5.addEventListener("click", displayAndStoreNumber);
+button6.addEventListener("click", displayAndStoreNumber);
+button7.addEventListener("click", displayAndStoreNumber);
+button8.addEventListener("click", displayAndStoreNumber);
+button9.addEventListener("click", displayAndStoreNumber);
+button0.addEventListener("click", displayAndStoreNumber);
+buttonPlus.addEventListener("click", operationButton);
+buttonMinus.addEventListener("click", operationButton);
+buttonEuqals.addEventListener("click", operationButton);
+buttonClear.addEventListener("click", clearButton);
