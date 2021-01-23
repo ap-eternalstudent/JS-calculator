@@ -26,8 +26,8 @@ const displayAndStoreNumber = function (button) {
   numbers.push(buttonNo);
   numbersToDisplay += String(button.target.textContent);
   input.value = numbersToDisplay;
-  console.log(numbersToDisplay);
-  console.log(numbers);
+  // console.log(numbersToDisplay);
+  // console.log(numbers);
 };
 
 const clearButton = function () {
@@ -38,8 +38,13 @@ const clearButton = function () {
 };
 
 const operationButton = function (button) {
+  let storeNumbersHere = [];
   if (button.target.textContent == "+") {
-    console.log("im a plus +");
+    storeNumbersHere.push(numbers.join(""));
+    numbersToDisplay = initialDipslay;
+    input.value = initialDipslay;
+    numbers = [];
+    console.log(storeNumbersHere);
   } else if (button.target.textContent == "-") {
     console.log("im a minus -");
   } else {
